@@ -7,8 +7,11 @@ import Navbar from './Components/Navbar'
 import {Ecommernce,Order,Kanban,Editor,Customers,Calendar,ColorPicker,
 Area,Bar,ColorMapping,Pyramid,Pie,Line,Stacked,Financial, Employee,ThemeSettings
 } from './pages'
-function App() {
-  const activeMenu =true
+import {useStateContext} from './contexts/ContextProvider'
+
+const App =() => {
+  const {activeMenu} =useStateContext()
+
   return (
     <div>
       <BrowserRouter>
