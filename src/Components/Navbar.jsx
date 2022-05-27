@@ -10,6 +10,8 @@ import {Cart} from './Cart'
 import {Chat} from './Chat'
 import {Notification} from './Notification'
 import { RiNotification3Line } from 'react-icons/ri'
+import { MdKeyboardArrowDown } from 'react-icons/md'
+
 
 const NavButton =({title,icon,customFuc,color,dotColor})=>(
   <TooltipComponent content={title} position="BottomCenter">
@@ -31,6 +33,7 @@ const NavButton =({title,icon,customFuc,color,dotColor})=>(
 const Navbar =() =>{
 
   const {activeMenu,setActiveMenu}=useStateContext()
+  const {isClicked,setisClicked }=useStateContext()
 
   const handleClick =()=>{}
 
@@ -66,7 +69,17 @@ const Navbar =() =>{
            <div className='flex item-center gap-2 p-2 cursor-pointer rounded-lg'
            onClick={()=>handleClick('user profile')} 
           >
-
+           <img 
+           className="rounded-full w-8 h-8"
+            src={avatar}
+           />
+          <p>
+            <span className='text-gray-400 text-14'>Hi </span>{ ' '}
+            <span className='text-gray-400 font-bold text-14'> Henry Juuko</span>
+          </p>
+           <MdKeyboardArrowDown
+            className='text-gray-400 text-14'
+           />
            </div>
         </TooltipComponent>
       </div>
