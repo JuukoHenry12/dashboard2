@@ -2,9 +2,7 @@ import React from 'react'
 
 function Kanban() {
   return (
-    <div>
-      
-    </div>
+    <div>Kanban</div>
   )
 }
 
